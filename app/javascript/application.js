@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let nextStartTime = null;
   
         document.querySelectorAll(`td[data-technician-id="${technicianId}"] div`).forEach(div => {
-          const duration = parseInt(div.querySelector('p:nth-child(3)').textContent.split(' ')[1], 10);
+          const duration = parseInt(div.querySelector('p:nth-child(4)').textContent.split(' ')[1], 10);
           const Time = div.querySelector('p:nth-child(2)').textContent.split(' ')[1];
   
           const startTime = new Date(`2024-10-01T${Time}`);
           const endTime = new Date(startTime.getTime() + duration * 60000);
-  
+
           if (startTime.getHours() < hour && (!prevEndTime || prevEndTime < endTime)) {
             prevEndTime = endTime;
           }
