@@ -32,7 +32,7 @@ If you have done all the above tasks without issue then you should be ready to r
 1. **Running the Server**
    To run the server run the following from inside the **PestScheduler** folder:
    ```bash
-   rail s
+   rails s
    ```
 
 2. **Opening the Website**
